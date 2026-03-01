@@ -1,5 +1,5 @@
 What are 3 good practices related to exception handling?
 
-1. 
-2. 
-3. 
+1. Never trash or otherwise try to disregard exceptions. Either throw the proper exceptions, or use a try catch-statement to properly handle them
+2. Provide specific information when making exceptions and error messages rather than generic "this failed" messages.
+3. Avoid relying on exceptions, as they are slow to manage. Write code that will in general avoid throwing exceptions whenever possible.
