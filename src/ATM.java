@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 
 public class ATM {
 	private BankAccount _bankAccount;
@@ -17,7 +18,9 @@ public class ATM {
 		} catch(NegativeBalanceException e) {
 			System.out.println(e);            
 	        System.out.println(e.getMessage()); 
-		}
+		}catch (FileNotFoundException e) {
+	        System.out.println("Error writing to log file.");
+	    }
 		
 		//Negative balance exception on quickWithdraw
 		
@@ -27,7 +30,9 @@ public class ATM {
 		} catch(NegativeBalanceException e) {
 			System.out.println(e);            
 	        System.out.println(e.getMessage()); 
-		}
+		}  catch (FileNotFoundException e) {
+	        System.out.println("Error writing to log file.");
+	    }
 		
 	}
 	
