@@ -12,16 +12,21 @@ public class BankAccount {
 	 * 
 	 * @param amount - the amount to attempt to withdraw
 	 */
-	public void withdraw(double amount) throws NegativeBalanceException, FileNotFoundException {
-		if (amount > _balance) throw new NegativeBalanceException(_balance - amount);
-		
-		amount = _balance;
+	public void withdraw(double amount) throws NegativeBalanceException, FileNotFoundException{
+		if (amount > _balance) {
+			throw new NegativeBalanceException(_balance - amount);
+		} else {
+			 _balance -= amount;
+		}
 	}
 	
-	public void quickWithdraw(double amount) throws NegativeBalanceException, FileNotFoundException {
-		if (amount > _balance) throw new NegativeBalanceException();
+	public void quickWithdraw(double amount) throws NegativeBalanceException, FileNotFoundException{
+		if (amount > _balance) {
+			throw new NegativeBalanceException();
+		} else {
+			_balance -= amount;
+		}
 		
-		amount = _balance;
 	}
 	
 }
