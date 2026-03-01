@@ -1,5 +1,10 @@
 import java.io.FileNotFoundException;
 
+/*
+* Author Chase Beckley
+* 
+* Bank account manager with withdraw and exception handling
+*/
 public class BankAccount {
 	private double _balance;
 	
@@ -20,6 +25,11 @@ public class BankAccount {
 		}
 	}
 	
+	/**
+	 * Withdraw a specified amount, or throw an empty exception if there is not enough to withdraw
+	 * 
+	 * @param amount - the amount to attempt to withdraw
+	 */
 	public void quickWithdraw(double amount) throws NegativeBalanceException, FileNotFoundException{
 		if (amount > _balance) {
 			throw new NegativeBalanceException();
