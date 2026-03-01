@@ -1,5 +1,10 @@
 import java.io.FileNotFoundException;
 
+/*
+* Author Jiah Folvarko
+* 
+* ATM for calling transactions involving the bank account
+*/
 public class ATM {
 	private BankAccount _bankAccount;
 	
@@ -8,7 +13,7 @@ public class ATM {
 	}
 	
 
-	
+	// Attempt to withdraw from the bank
 	public void handleTransactions() {
 		
 		//Negative balance Exception on withdraw
